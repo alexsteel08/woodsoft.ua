@@ -1,0 +1,198 @@
+/*slick slider*/
+/*slick*/
+.slick-list {
+    overflow: hidden;
+}
+
+.slick-track {
+    display: flex;
+    /*align-items: flex-start;*/
+}
+
+.slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline-start: 0px;
+}
+
+.slick-dots li {
+    list-style: none;
+    margin: 0px 10px;
+}
+
+.slick-dots li.slick-active button {
+    background-color: #103178;
+    /*border: 1px solid;*/
+    height: 14px;
+    width: 14px;
+}
+
+.slick-dots li button {
+    font-size: 0;
+    background-color: #a0a0a2;
+    border-radius: 50%;
+    border: none;
+    width: 7px;
+    height: 7px;
+}
+
+.slick-arrow.slick-prev {
+    right: 130px;
+    position: absolute;
+    bottom: 0%;
+    z-index: 3;
+    font-size: 0;
+    width: 16px;
+    height: 27px;
+    border-width: 0px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='28' viewBox='0 0 16 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.34392 27.5757L15.9199 13.9997L2.34392 0.423681L0.0799222 2.68608L11.3951 13.9997L0.0799222 25.3133L2.34392 27.5757Z' fill='%2357627C'/%3E%3C/svg%3E%0A");
+    background-color: transparent;
+    background-position-x: center;
+    background-position-y: center;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-size: cover;
+    transform: rotate(180deg);
+    /*filter: grayscale(1) brightness(1);*/
+}
+
+.slick-arrow.slick-next {
+    right: 50px;
+    position: absolute;
+    bottom: 0%;
+    z-index: 2;
+    font-size: 0;
+    width: 16px;
+    height: 27px;
+    border-width: 0px;
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='28' viewBox='0 0 16 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.34392 27.5757L15.9199 13.9997L2.34392 0.423681L0.0799222 2.68608L11.3951 13.9997L0.0799222 25.3133L2.34392 27.5757Z' fill='%2357627C'/%3E%3C/svg%3E%0A");
+    background-color: transparent;
+    background-position-x: center;
+    background-position-y: center;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-size: cover;
+    /*filter: grayscale(1) brightness(1);*/
+}
+
+.slider-item {
+    text-align: center;
+}
+
+.slider-item.slick-slide.slick-current.slick-active.slick-center {
+    opacity: 1;
+}
+
+/*slick*/
+/* Слайдер */
+.slick-slider {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
+
+/* Слайдер с точками */
+.slick-slider.slick-dotted {
+}
+
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
+}
+
+/* Лента слайдов */
+.carousel .slick-track {
+    display: flex;
+    /*align-items: flex-start;*/
+}
+
+.logos_in_line .slick-track {
+    display: flex;
+    /*align-items: flex-start;*/
+}
+
+.logos_in_line__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Слайд */
+.slick-slide {
+    margin: 0 15px;
+    height: initial;
+}
+
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {
+}
+
+/* Слайд основной */
+.slick-slide.slick-current {
+}
+
+/* Слайд по центру */
+.slick-slide.slick-center {
+}
+
+/* Клонированный слайд */
+.slick-slide.slick-cloned {
+}
+
+/* Стрелка */
+.slick-arrow {
+}
+
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+}
+
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+}
+
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}
+
+/* Точки (булиты) */
+.slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1.5rem !important;
+}
+
+.slick-dots li {
+    list-style: none;
+    margin: 0px 3px;
+    cursor: pointer;
+}
+
+/* Активная точка */
+.slick-dots li.slick-active button {
+    background-color: #0087ab;
+    /*border: 1px solid;*/
+    height: 15px;
+    width: 15px;
+    padding: 0px;
+}
+
+/* Элемент точки */
+.slick-dots li button {
+    font-size: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+    opacity: 0.5;
+}
