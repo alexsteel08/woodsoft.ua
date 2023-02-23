@@ -65,7 +65,7 @@
                     <?php endif; ?>
 
                     <div class="popup-btn">
-                        <a class="callback" >Залишити заявку</a>
+                        <a class="callback" > <?php _e('Leave a request','woodsoft'); ?></a>
                     </div>
                     <?php if( have_rows('social_links', 'option') ): ?>
                         <ul class="social">
@@ -108,7 +108,14 @@
     <div class="modal_callback_block">
         <div class="modal_close callback">X</div>
         <div class="modal_callback_content">
-            <?php echo do_shortcode('[contact-form-7 id="1407" title="cf_footer"]');?>
+            <?php if(ICL_LANGUAGE_CODE=='en'): ?>
+                <?php echo do_shortcode('[contact-form-7 id="8587" title="cf_footer_en"]');?>
+            <?php elseif(ICL_LANGUAGE_CODE=='uk'): ?>
+                <?php echo do_shortcode('[contact-form-7 id="1407" title="cf_footer"]');?>
+            <?php elseif(ICL_LANGUAGE_CODE=='ru'): ?>
+                <?php echo do_shortcode('[contact-form-7 id="8586" title="cf_footer_ru"]');?>
+            <?php endif; ?>
+
         </div>
     </div>
 </div>

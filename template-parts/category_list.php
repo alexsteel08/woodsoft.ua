@@ -21,3 +21,9 @@
 
 
 ?>
+
+<?php if( get_field('name', 'option') ): ?>
+   <h3>
+      <?php the_field('name', 'option'); ?>
+   </h3>
+<?php endif; ?>

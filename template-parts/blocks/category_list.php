@@ -12,7 +12,7 @@
                 <div class="category-block">
                     <div class="content" <?php if($num % 2 == 0){ ?> "data-aos="fade-right" <?php }else{ ?> "data-aos="fade-left" <?php } ?> >
                         <h3><?php the_sub_field('title'); ?></h3>
-                        <a href="<?php the_sub_field('link'); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/icon/more-arrow.svg" alt=""> Детальніше</a>
+                        <a href="<?php the_sub_field('link'); ?>"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/icon/more-arrow.svg" alt=""> <?php _e('More details','woodsoft'); ?></a>
                     </div>
                     <div data-aos="fade-left" class="image object-fit">
                         <img src="<?php echo $image; ?>" alt="">

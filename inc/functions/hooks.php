@@ -50,11 +50,11 @@ function bbloomer_remove_product_page_sku( $enabled ) {
 /**
  * Remove WooCommerce breadcrumbs
  */
-add_action( 'init', 'my_remove_breadcrumbs' );
-
-function my_remove_breadcrumbs() {
-    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
-}
+//add_action( 'init', 'my_remove_breadcrumbs' );
+//
+//function my_remove_breadcrumbs() {
+//    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+//}
 
 /**
  * @snippet       Hide SKU, Cats, Tags @ Single Product Page - WooCommerce
@@ -87,7 +87,7 @@ add_filter('woocommerce_product_tabs', function ($tabs) {
 
 add_filter( 'woocommerce_product_tabs', 'techglimpse_rename_tab', 98);
 function techglimpse_rename_tab($tabs) {
-    $tabs['additional_information']['title'] = 'Характеристики';
+    $tabs['additional_information']['title'] = __( 'Characteristics', 'woocommerce' );
     return $tabs;
 }
 
@@ -191,6 +191,7 @@ function remove_company_name( $fields ) {
 
 add_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );
 function woocommerce_taxonomy_archive_description() {
+
     echo get_template_part( 'template-parts/filter' );
 //    echo do_shortcode('[woof]');
 }
@@ -272,30 +273,43 @@ add_action( 'woocommerce_single_variation', 'add_content_after_addtocart_button_
  */
 function add_content_after_addtocart_button_func() {
 
-    // Echo content.
-    echo '<div class="top-card">
-	<div class="content">
-	<div class="fabrics-title">
-            <h3>Тканини</h3>
-          </div>
-		<div class="fabrics">
-            <div class="col">
-              <p>Тканин в асортименті більше 1000. Представлені тільки найпопулярніші</p>
-            </div>
-            <div class="col">
-              <div class="show-fabrics second_content">
-                <span>
-                  <span class="strong">Обрати тканину</span>
-                  +73 Варіантів
-                </span>
-                <img class="arrow " src="/wp-content/themes/woodsoft/assets/images/icon/btn-arrow.svg" alt="">
-              </div>
-            </div>
-          </div>
-	</div>
-</div> ';
+    if (get_field('tex_show_hide')) {
+
+
+    } else {
+        // Echo content.
+        echo '<div class="top-card">';
+        echo '<div class="content">';
+        echo '<div class="fabrics-title">';
+        echo '<h3>';
+        echo the_field('title_variation_btn', 'option');
+        echo '</h3>';
+        echo '</div>';
+        echo '<div class="fabrics">';
+        echo '<div class="col">';
+        echo '<p>';
+        echo the_field('text_variation_btn', 'option');
+        echo '</p>';
+        echo '</div>';
+        echo '<div class="col">';
+        echo '<div class="show-fabrics second_content">';
+        echo '<span>';
+        echo '<span class="strong">';
+        echo the_field('btn_variation_btn', 'option');
+        echo '</span>';
+        echo the_field('qty_variation_btn', 'option');
+        echo '</span>';
+        echo '<img class="arrow " src="/wp-content/themes/woodsoft/assets/images/icon/btn-arrow.svg" alt="">';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+        echo '</div>';
+    }
 
 }
+
+
 
 
 
@@ -321,15 +335,38 @@ add_action( 'woocommerce_after_add_to_cart_button', 'add_content_after_addtocart
 function add_content_after_addtocart_button_func_one() {
     if( get_field('form_shortcode') ): ?>
         <?php
-        echo '<div class="top-card">
-            <div class="flex-bottom">
-                <a class="model model3d">
-                    <span>3D модель</span>
-                    <img class="svg-image" src="/wp-content/themes/woodsoft/assets/images/icon/download.svg" alt="">
-                </a>
+        if(ICL_LANGUAGE_CODE=='en'): ?>
+            <?php echo '<div class="top-card">
+                <div class="flex-bottom">
+                    <a class="model model3d">
+                        <span>3D model  </span>
+                        <img class="svg-image" src="/wp-content/themes/woodsoft/assets/images/icon/download.svg" alt="">
+                    </a>
+                </div>
             </div>
-        </div>
-        ';
+            ';?>
+        <?php elseif(ICL_LANGUAGE_CODE=='ru'): ?>
+            <?php echo '<div class="top-card">
+                <div class="flex-bottom">
+                    <a class="model model3d">
+                        <span>3D модель</span>
+                        <img class="svg-image" src="/wp-content/themes/woodsoft/assets/images/icon/download.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            ';?>
+        <?php elseif(ICL_LANGUAGE_CODE=='uk'): ?>
+            <?php echo '<div class="top-card">
+                <div class="flex-bottom">
+                    <a class="model model3d">
+                        <span>3D модель</span>
+                        <img class="svg-image" src="/wp-content/themes/woodsoft/assets/images/icon/download.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            ';?>
+        <?php endif;
+
       ?>
 
 <?php endif;

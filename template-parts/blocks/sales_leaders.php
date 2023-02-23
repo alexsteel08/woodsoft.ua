@@ -32,7 +32,7 @@
 
     <div class="container load-container">
         <div data-aos="fade-up" class="load-more">
-            <a href="<?php echo wc_get_page_permalink( 'shop' ) ?>">Завантажити ще</a>
+            <a href="<?php echo wc_get_page_permalink( 'shop' ) ?>"><?php _e('Load more','woodsoft'); ?></a>
         </div>
     </div>
 </section>

@@ -6,6 +6,13 @@ jQuery(document).ready(function($){
 });
 
 jQuery(document).ready(function($){
+    $('.show-more').click(function(event) {
+        $('.cat_description').toggleClass('max-text');
+        $('.show-more').toggleClass('arrow_rotate');
+    });
+});
+
+jQuery(document).ready(function($){
     $('.filter_prod_img').click(function(event) {
         $('.filter_prod_filter').toggleClass('open');
     });
@@ -25,9 +32,7 @@ jQuery(document).ready(function($){
 
 });
 
-jQuery(document).ready(function($){
 
-});
 
 jQuery(document).ready(function($){
     $('.wpcf7-intl-tel').on('input', function() {

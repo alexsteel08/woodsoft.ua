@@ -31,3 +31,25 @@ function customtheme_add_woocommerce_support()
     add_theme_support( 'woocommerce' );
 }
 add_action( 'after_setup_theme', 'customtheme_add_woocommerce_support' );
+function western_custom_buy_buttons(){
+
+    $product = get_product();
+
+    if(ICL_LANGUAGE_CODE=='en') { ?>
+
+
+        <style>
+            .single_add_to_cart_button,
+            .price{
+                display: none !important;
+            }
+            .woocommerce-variation-add-to-cart .top-card {
+                left: 0;
+            }
+        </style>
+<?
+    }
+
+}
+
+add_action( 'wp', 'western_custom_buy_buttons' );

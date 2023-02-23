@@ -18,8 +18,8 @@
                     <div class="link">
                         <a href="tel:<?php if ($num_phone) { echo preg_replace('/[^0-9]/', '', $num_phone); } ?>"><?php the_sub_field('number_phone'); ?></a>
                     </div>
-                    <div class="popup-link">
-                        <a href="">Залишити заявку</a>
+                    <div class="popup-link popup-btn">
+                        <a class="callback"><?php _e('Leave a request','woodsoft'); ?></a>
                     </div>
                 </div>
             <?php endif; ?>

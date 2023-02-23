@@ -34,8 +34,17 @@ if ( post_password_required() ) {
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
     <?php if (get_field('link_to_video') ): ?>
     <div class="lets-play" href="" data-video="<?php the_field('link_to_video'); ?>">
-        <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/icon/video-icon.svg"
-             alt="play-video">
+        <?php if(ICL_LANGUAGE_CODE=='en'): ?>
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/icon/videoen.svg"
+                 alt="play-video">
+        <?php elseif(ICL_LANGUAGE_CODE=='uk'): ?>
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/icon/video-icon.svg"
+                 alt="play-video">
+        <?php elseif(ICL_LANGUAGE_CODE=='ru'): ?>
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/icon/videoru.svg"
+                 alt="play-video">
+        <?php endif; ?>
+
     </div>
     <?php endif; ?>
 	<?php

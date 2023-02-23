@@ -80,7 +80,10 @@
                 <div class="header-control">
                     <ul>
                         <li><a href="<?php if ( is_user_logged_in() ) { ?> <?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?> <?php } else { ?><?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?><?php } ?>"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/icon/user.svg" alt=""></a></li>
-                        <li><a href="<?php echo esc_url( wc_get_cart_url() ); ?>"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/icon/shopping-cart.svg"alt=""></a></li>
+                        <li class="card_logo">
+                            <span class="quantity"><?php echo WC()->cart->get_cart_contents_count(); ?></span>
+                            <a href="<?php echo esc_url( wc_get_cart_url() ); ?>"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/icon/shopping-cart.svg"alt=""></a>
+                        </li>
                     </ul>
                     <?php echo do_shortcode('[wpml_language_selector_widget]');?>
                     <div class="lang">
@@ -101,13 +104,13 @@
     </div>
 </header>
 <?php if ( ! is_front_page() ) { ?>
-    <div class="container">
-        <?php
-        if ( function_exists( 'yoast_breadcrumb' ) ) {
-            yoast_breadcrumb( '<p id="breadcrumbs">', '</p>' );
-        }
-        ?>
-    </div>
+<!--    <div class="container">-->
+<!--        --><?php
+//        if ( function_exists( 'yoast_breadcrumb' ) ) {
+//            yoast_breadcrumb( '<p id="breadcrumbs">', '</p>' );
+//        }
+//        ?>
+<!--    </div>-->
 
 
 

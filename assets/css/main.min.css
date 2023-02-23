@@ -3116,6 +3116,7 @@ h2 {
         font-size: 28px;
         line-height: 130%;
         margin-bottom: 25px;
+        margin-top: 40px;
     }
 }
 .delivery .breadcrums {
@@ -4102,7 +4103,7 @@ h2 {
 }
 @media screen and (max-width: 479.98px) {
     .home-hero {
-        padding: 0;
+        padding: 20px 0 0 0;
     }
 }
 .home-hero .hero-inner {
@@ -4269,7 +4270,7 @@ h2 {
 }
 .home-category .content h3 {
     font-weight: 400;
-    font-size: 50px;
+    font-size: 40px;
     line-height: 130%;
     color: #4e4e4e;
 }
@@ -4280,7 +4281,7 @@ h2 {
 }
 @media screen and (max-width: 479.98px) {
     .home-category .content h3 {
-        font-size: 28px;
+        font-size: 22px;
         margin-bottom: 4px;
     }
 }
@@ -4518,7 +4519,7 @@ h2 {
 }
 @media screen and (max-width: 479.98px) {
     .product-block .image img {
-        width: 194px;
+        width: 100%;
         height: 193px;
     }
 }
@@ -4813,6 +4814,7 @@ h2 {
     padding: 20px 0 90px;
     /*overflow: hidden;*/
 }
+
 @media screen and (max-width: 479.98px) {
     .category {
         padding: 0 0 61px;
@@ -4863,9 +4865,9 @@ h2 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     overflow-x: auto;
-    padding-bottom: 18px;
+    padding-bottom: 1px;
 }
 @media screen and (max-width: 479.98px) {
     .category .category-list {
